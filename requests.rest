@@ -1,0 +1,52 @@
+POST http://localhost:8000/api/auth/signup
+Content-Type: application/json
+
+{
+    "email": "testeur@gmail.com",
+    "password": "StrongP@ssw0rd1"
+}  
+
+###
+POST http://localhost:8000/api/auth/signin
+Content-Type: application/json
+
+{
+    "email": "testeur@gmail.com",
+    "password": "StrongP@ssw0rd1"
+}  
+
+###
+POST http://localhost:8000/api/auth/signout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODFmM2E0Mzg4MjRjNjM2OGQ0YTIwNWQiLCJlbWFpbCI6InRlc3RldXJAZ21haWwuY29tIiwidmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE3NDY4Nzg3NTIsImV4cCI6MTc0NjkwNzU1Mn0.6bbCycOlUr206TOXh8BBZNZJQ1BiIw0k0jH9bhShfZk
+Content-Type: application/json
+
+{
+    "email": "testeur@gmail.com",
+    "password": "StrongP@ssw0rd1"
+}  
+
+###
+GET http://localhost:8000/api/posts/all-posts
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODFmM2E0Mzg4MjRjNjM2OGQ0YTIwNWQiLCJlbWFpbCI6InRlc3RldXJAZ21haWwuY29tIiwidmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE3NDY4Nzg2MDQsImV4cCI6MTc0NjkwNzQwNH0.hf4xmvy9N0ecN0UzBLx-DsKHo-PEX0V7fIknhEZi0CQ
+
+### Create Post
+POST http://localhost:8000/api/posts/create-post
+client: not-browser
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODFmM2E0Mzg4MjRjNjM2OGQ0YTIwNWQiLCJlbWFpbCI6InRlc3RldXJAZ21haWwuY29tIiwidmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE3NDY4Nzg3NTIsImV4cCI6MTc0NjkwNzU1Mn0.6bbCycOlUr206TOXh8BBZNZJQ1BiIw0k0jH9bhShfZk
+
+{
+    "title": "title post",
+    "description": "title content"
+} 
+
+
+###
+PUT http://localhost:8000/api/posts/update-post?_id=681f427366206f28fec9e89a
+client: not-browser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2ODFmM2E0Mzg4MjRjNjM2OGQ0YTIwNWQiLCJlbWFpbCI6InRlc3RldXJAZ21haWwuY29tIiwidmVyaWZpZWQiOmZhbHNlLCJpYXQiOjE3NDY4Nzg3NTIsImV4cCI6MTc0NjkwNzU1Mn0.6bbCycOlUr206TOXh8BBZNZJQ1BiIw0k0jH9bhShfZk
+Content-Type: application/json
+
+{
+    "title": "title post",
+    "description": "title edit"
+}
